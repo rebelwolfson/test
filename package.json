@@ -22,6 +22,7 @@
   "homepage": "https://github.com/rebelwolfson/test#readme",
   "devDependencies": {
     "@types/jasmine": "*",
+    "@types/node": "7.0.5",
     "husky": "^0.13.2",
     "jasmine": "^2.5.2",
     "lint-staged": "^3.3.1",
@@ -40,7 +41,7 @@
     "validate": "node ./node_modules/validate-commit-msg/lib/cli.js",
     "commitmsg": "npm run validate",
     "precommit": "npm run lint-staged",
-    "prepush": "npm test"
+    "prepush": "npm run build && npm run test"
   },
   "lint-staged": {
     "*.ts": [
